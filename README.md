@@ -1,1 +1,1 @@
-# Wolrdcup 2026
+# Wordlcup 2026
