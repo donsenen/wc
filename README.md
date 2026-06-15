@@ -1,1 +1,1 @@
-# wc
+# Wolrdcup 2026
