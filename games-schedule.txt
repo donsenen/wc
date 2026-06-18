@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-17 20:37:14 ART
+⏰ Last Update: 2026-06-17 21:37:12 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -24,7 +24,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-17      | Austria                   | Jordan                    | 3 - 1
 2026-06-17      | Portugal                  | Congo DR                  | 1 - 1
 2026-06-17      | England                   | Croatia                   | 4 - 2
-2026-06-17      | Ghana                     | Panama                    | 0 - 0
+2026-06-18      | Ghana                     | Panama                    | 0 - 0
 2026-06-16      | Uzbekistan                | Colombia                  | - - -
 2026-06-16      | Czechia                   | South Africa              | - - -
 2026-06-16      | Switzerland               | Bosnia-Herzegovina        | - - -
