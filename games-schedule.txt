@@ -1,109 +1,109 @@
-⏰ Last Update: 2026-06-17 23:37:16 ART
+⏰ Last Update: 2026-06-18 00:37:19 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
-2026-06-17      | Mexico                    | South Africa              | 2 - 0
-2026-06-17      | South Korea               | Czechia                   | 2 - 1
-2026-06-17      | Canada                    | Bosnia-Herzegovina        | 1 - 1
-2026-06-17      | United States             | Paraguay                  | 4 - 1
-2026-06-17      | Qatar                     | Switzerland               | 1 - 1
-2026-06-17      | Brazil                    | Morocco                   | 1 - 1
-2026-06-17      | Haiti                     | Scotland                  | 0 - 1
-2026-06-17      | Australia                 | Turkey                    | 2 - 0
-2026-06-17      | Germany                   | Curaçao                   | 7 - 1
-2026-06-17      | Netherlands               | Japan                     | 2 - 2
-2026-06-17      | Ivory Coast               | Ecuador                   | 1 - 0
-2026-06-17      | Sweden                    | Tunisia                   | 5 - 1
-2026-06-17      | Spain                     | Cape Verde Islands        | 0 - 0
-2026-06-17      | Belgium                   | Egypt                     | 1 - 1
-2026-06-17      | Saudi Arabia              | Uruguay                   | 1 - 1
-2026-06-17      | Iran                      | New Zealand               | 2 - 2
+2026-06-12      | Mexico                    | South Africa              | 2 - 0
+2026-06-12      | South Korea               | Czechia                   | 2 - 1
+2026-06-12      | Canada                    | Bosnia-Herzegovina        | - - -
+2026-06-13      | United States             | Paraguay                  | 4 - 1
+2026-06-13      | Qatar                     | Switzerland               | 1 - 1
+2026-06-14      | Brazil                    | Morocco                   | 1 - 1
+2026-06-14      | Haiti                     | Scotland                  | 0 - 1
+2026-06-14      | Australia                 | Turkey                    | 2 - 0
+2026-06-15      | Germany                   | Curaçao                   | 7 - 1
+2026-06-15      | Netherlands               | Japan                     | 2 - 2
+2026-06-15      | Ivory Coast               | Ecuador                   | 1 - 0
+2026-06-15      | Sweden                    | Tunisia                   | 5 - 1
+2026-06-16      | Spain                     | Cape Verde Islands        | 0 - 0
+2026-06-16      | Belgium                   | Egypt                     | 1 - 1
+2026-06-16      | Saudi Arabia              | Uruguay                   | 1 - 1
+2026-06-16      | Iran                      | New Zealand               | 2 - 2
 2026-06-17      | France                    | Senegal                   | 3 - 1
 2026-06-17      | Iraq                      | Norway                    | 1 - 4
 2026-06-17      | Argentina                 | Algeria                   | 3 - 0
 2026-06-17      | Austria                   | Jordan                    | 3 - 1
 2026-06-17      | Portugal                  | Congo DR                  | 1 - 1
-2026-06-18      | England                   | Croatia                   | 4 - 2
+2026-06-17      | England                   | Croatia                   | 4 - 2
 2026-06-18      | Ghana                     | Panama                    | 1 - 0
-2026-06-18      | Uzbekistan                | Colombia                  | 0 - 0
-2026-06-17      | Czechia                   | South Africa              | - - -
-2026-06-17      | Switzerland               | Bosnia-Herzegovina        | - - -
-2026-06-17      | Canada                    | Qatar                     | - - -
-2026-06-17      | Mexico                    | South Korea               | - - -
-2026-06-17      | United States             | Australia                 | - - -
-2026-06-17      | Scotland                  | Morocco                   | - - -
-2026-06-17      | Brazil                    | Haiti                     | - - -
-2026-06-17      | Turkey                    | Paraguay                  | - - -
-2026-06-17      | Netherlands               | Sweden                    | - - -
-2026-06-17      | Germany                   | Ivory Coast               | - - -
-2026-06-17      | Ecuador                   | Curaçao                   | - - -
-2026-06-17      | Tunisia                   | Japan                     | - - -
-2026-06-17      | Spain                     | Saudi Arabia              | - - -
-2026-06-17      | Belgium                   | Iran                      | - - -
-2026-06-17      | Uruguay                   | Cape Verde Islands        | - - -
-2026-06-17      | New Zealand               | Egypt                     | - - -
-2026-06-17      | Argentina                 | Austria                   | - - -
-2026-06-17      | France                    | Iraq                      | - - -
-2026-06-17      | Norway                    | Senegal                   | - - -
-2026-06-17      | Jordan                    | Algeria                   | - - -
-2026-06-17      | Portugal                  | Uzbekistan                | - - -
-2026-06-17      | England                   | Ghana                     | - - -
-2026-06-17      | Panama                    | Croatia                   | - - -
-2026-06-17      | Colombia                  | Congo DR                  | - - -
-2026-06-17      | Switzerland               | Canada                    | - - -
-2026-06-17      | Bosnia-Herzegovina        | Qatar                     | - - -
-2026-06-17      | Morocco                   | Haiti                     | - - -
-2026-06-17      | Scotland                  | Brazil                    | - - -
-2026-06-18      | Czechia                   | Mexico                    | - - -
-2026-06-18      | South Africa              | South Korea               | - - -
-2026-06-17      | Ecuador                   | Germany                   | - - -
-2026-06-17      | Curaçao                   | Ivory Coast               | - - -
-2026-06-17      | Tunisia                   | Netherlands               | - - -
-2026-06-17      | Japan                     | Sweden                    | - - -
-2026-06-17      | Turkey                    | United States             | - - -
-2026-06-17      | Paraguay                  | Australia                 | - - -
-2026-06-17      | Norway                    | France                    | - - -
-2026-06-17      | Senegal                   | Iraq                      | - - -
-2026-06-17      | Uruguay                   | Spain                     | - - -
-2026-06-17      | Cape Verde Islands        | Saudi Arabia              | - - -
-2026-06-17      | New Zealand               | Belgium                   | - - -
-2026-06-17      | Egypt                     | Iran                      | - - -
-2026-06-17      | Panama                    | England                   | - - -
-2026-06-17      | Croatia                   | Ghana                     | - - -
-2026-06-17      | Colombia                  | Portugal                  | - - -
-2026-06-17      | Congo DR                  | Uzbekistan                | - - -
-2026-06-17      | Jordan                    | Argentina                 | - - -
-2026-06-17      | Algeria                   | Austria                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
-2026-06-17      | Unknown                   | Unknown                   | - - -
+2026-06-18      | Uzbekistan                | Colombia                  | 1 - 2
+2026-06-12      | Czechia                   | South Africa              | - - -
+2026-06-12      | Switzerland               | Bosnia-Herzegovina        | - - -
+2026-06-12      | Canada                    | Qatar                     | - - -
+2026-06-12      | Mexico                    | South Korea               | - - -
+2026-06-12      | United States             | Australia                 | - - -
+2026-06-12      | Scotland                  | Morocco                   | - - -
+2026-06-12      | Brazil                    | Haiti                     | - - -
+2026-06-12      | Turkey                    | Paraguay                  | - - -
+2026-06-12      | Netherlands               | Sweden                    | - - -
+2026-06-12      | Germany                   | Ivory Coast               | - - -
+2026-06-12      | Ecuador                   | Curaçao                   | - - -
+2026-06-12      | Tunisia                   | Japan                     | - - -
+2026-06-12      | Spain                     | Saudi Arabia              | - - -
+2026-06-12      | Belgium                   | Iran                      | - - -
+2026-06-12      | Uruguay                   | Cape Verde Islands        | - - -
+2026-06-12      | New Zealand               | Egypt                     | - - -
+2026-06-12      | Argentina                 | Austria                   | - - -
+2026-06-12      | France                    | Iraq                      | - - -
+2026-06-12      | Norway                    | Senegal                   | - - -
+2026-06-12      | Jordan                    | Algeria                   | - - -
+2026-06-12      | Portugal                  | Uzbekistan                | - - -
+2026-06-12      | England                   | Ghana                     | - - -
+2026-06-12      | Panama                    | Croatia                   | - - -
+2026-06-12      | Colombia                  | Congo DR                  | - - -
+2026-06-12      | Switzerland               | Canada                    | - - -
+2026-06-12      | Bosnia-Herzegovina        | Qatar                     | - - -
+2026-06-12      | Morocco                   | Haiti                     | - - -
+2026-06-12      | Scotland                  | Brazil                    | - - -
+2026-06-12      | Czechia                   | Mexico                    | - - -
+2026-06-12      | South Africa              | South Korea               | - - -
+2026-06-12      | Ecuador                   | Germany                   | - - -
+2026-06-12      | Curaçao                   | Ivory Coast               | - - -
+2026-06-12      | Tunisia                   | Netherlands               | - - -
+2026-06-12      | Japan                     | Sweden                    | - - -
+2026-06-12      | Turkey                    | United States             | - - -
+2026-06-12      | Paraguay                  | Australia                 | - - -
+2026-06-12      | Norway                    | France                    | - - -
+2026-06-12      | Senegal                   | Iraq                      | - - -
+2026-06-12      | Uruguay                   | Spain                     | - - -
+2026-06-12      | Cape Verde Islands        | Saudi Arabia              | - - -
+2026-06-12      | New Zealand               | Belgium                   | - - -
+2026-06-12      | Egypt                     | Iran                      | - - -
+2026-06-12      | Panama                    | England                   | - - -
+2026-06-12      | Croatia                   | Ghana                     | - - -
+2026-06-12      | Colombia                  | Portugal                  | - - -
+2026-06-12      | Congo DR                  | Uzbekistan                | - - -
+2026-06-12      | Jordan                    | Argentina                 | - - -
+2026-06-12      | Algeria                   | Austria                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
+2026-06-12      | Unknown                   | Unknown                   | - - -
 **************************************************
