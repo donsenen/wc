@@ -5,2080 +5,1607 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🏆 World Cup 2026 Solo Scores</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function filterDashboard() {
+            var homeFilter = document.getElementById('home-filter').value;
+            var awayFilter = document.getElementById('away-filter').value;
+            var rows = document.getElementsByClassName('match-row');
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                var rowHome = row.getAttribute('data-home');
+                var rowAway = row.getAttribute('data-away');
+
+                var matchesHome = (homeFilter === 'all' || rowHome === homeFilter);
+                var matchesAway = (awayFilter === 'all' || rowAway === awayFilter);
+
+                if (matchesHome && matchesAway) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen p-4 sm:p-6 font-sans">
     <div class="max-w-4xl mx-auto">
         <header class="mb-8 text-center">
             <h2 class="text-4xl sm:text-5xl font-black text-amber-400 mb-2 tracking-tight">⚽ WORLD CUP SOLO SCORES</h2>
             <p class="text-xs sm:text-sm text-gray-400 tracking-wide uppercase">
-                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-20 15:07:56 ART</span>
+                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-20 15:13:32 ART</span>
             </p>
         </header>
         
         <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
-            <div class="grid grid-cols-4 bg-gray-850 px-6 py-4 font-bold border-b border-gray-700 text-amber-400 text-xs tracking-wider uppercase">
-                <div>Date</div>
-                <div class="text-right pr-4">Home</div>
-                <div class="text-center">Score</div>
-                <div class="text-left pl-4">Away</div>
+            <div class="grid grid-cols-4 bg-gray-850 px-6 py-4 font-bold border-b border-gray-700 text-amber-400 text-xs tracking-wider uppercase items-end gap-2">
+                <div class="pb-2">Date</div>
+                <div class="text-right pr-4 flex flex-col items-end gap-1.5">
+                    <span>Home</span>
+                    <select id="home-filter" onchange="filterDashboard()" class="w-full max-w-[130px] bg-gray-800 text-gray-300 border border-gray-700 rounded p-1 text-[11px] font-medium cursor-pointer focus:outline-none focus:border-amber-400 normal-case">
+                        <option value="all">All Teams</option>
+                        <option value="Algeria">Algeria</option>
+<option value="Argentina">Argentina</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Belgium">Belgium</option>
+<option value="Bosnia-Herzegovina">Bosnia-Herzegovina</option>
+<option value="Brazil">Brazil</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde Islands">Cape Verde Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Congo DR">Congo DR</option>
+<option value="Croatia">Croatia</option>
+<option value="Curaçao">Curaçao</option>
+<option value="Czechia">Czechia</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="England">England</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Haiti">Haiti</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Ivory Coast">Ivory Coast</option>
+<option value="Japan">Japan</option>
+<option value="Jordan">Jordan</option>
+<option value="Mexico">Mexico</option>
+<option value="Morocco">Morocco</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Norway">Norway</option>
+<option value="Panama">Panama</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Portugal">Portugal</option>
+<option value="Qatar">Qatar</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Scotland">Scotland</option>
+<option value="Senegal">Senegal</option>
+<option value="South Africa">South Africa</option>
+<option value="South Korea">South Korea</option>
+<option value="Spain">Spain</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="United States">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+                    </select>
+                </div>
+                <div class="text-center pb-2">Score</div>
+                <div class="text-left pl-4 flex flex-col items-start gap-1.5">
+                    <span>Away</span>
+                    <select id="away-filter" onchange="filterDashboard()" class="w-full max-w-[130px] bg-gray-800 text-gray-300 border border-gray-700 rounded p-1 text-[11px] font-medium cursor-pointer focus:outline-none focus:border-amber-400 normal-case">
+                        <option value="all">All Teams</option>
+                        <option value="Algeria">Algeria</option>
+<option value="Argentina">Argentina</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Belgium">Belgium</option>
+<option value="Bosnia-Herzegovina">Bosnia-Herzegovina</option>
+<option value="Brazil">Brazil</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde Islands">Cape Verde Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Congo DR">Congo DR</option>
+<option value="Croatia">Croatia</option>
+<option value="Curaçao">Curaçao</option>
+<option value="Czechia">Czechia</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="England">England</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Haiti">Haiti</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Ivory Coast">Ivory Coast</option>
+<option value="Japan">Japan</option>
+<option value="Jordan">Jordan</option>
+<option value="Mexico">Mexico</option>
+<option value="Morocco">Morocco</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Norway">Norway</option>
+<option value="Panama">Panama</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Portugal">Portugal</option>
+<option value="Qatar">Qatar</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Scotland">Scotland</option>
+<option value="Senegal">Senegal</option>
+<option value="South Africa">South Africa</option>
+<option value="South Korea">South Korea</option>
+<option value="Spain">Spain</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="United States">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+                    </select>
+                </div>
             </div>
     
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
-                    Mexico
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Mexico" 
+                 data-away="South Africa">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">Mexico</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">
-                    South Africa
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">South Africa</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Korea">
-                    South Korea
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="South Korea" 
+                 data-away="Czechia">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Korea">South Korea</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Czechia">
-                    Czechia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Czechia">Czechia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
-                    Canada
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Canada" 
+                 data-away="Bosnia-Herzegovina">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">Canada</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">
-                    Bosnia-Herzegovina
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="United States" 
+                 data-away="Paraguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
-                    United States
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">United States</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">
-                    Paraguay
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">Paraguay</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Qatar" 
+                 data-away="Switzerland">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Qatar">
-                    Qatar
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Qatar">Qatar</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Switzerland">
-                    Switzerland
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Switzerland">Switzerland</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Brazil" 
+                 data-away="Morocco">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
-                    Brazil
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">Brazil</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">
-                    Morocco
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">Morocco</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Haiti" 
+                 data-away="Scotland">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Haiti">
-                    Haiti
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Haiti">Haiti</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Scotland">
-                    Scotland
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Scotland">Scotland</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Australia" 
+                 data-away="Turkey">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Australia">
-                    Australia
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Australia">Australia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Turkey">
-                    Turkey
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Turkey">Turkey</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Germany" 
+                 data-away="Curaçao">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
-                    Germany
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">Germany</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         7 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">
-                    Curaçao
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">Curaçao</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Netherlands" 
+                 data-away="Japan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
-                    Netherlands
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">Netherlands</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 2
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">
-                    Japan
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">Japan</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Ivory Coast" 
+                 data-away="Ecuador">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ivory Coast">
-                    Ivory Coast
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ivory Coast">Ivory Coast</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ecuador">
-                    Ecuador
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ecuador">Ecuador</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Sweden" 
+                 data-away="Tunisia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Sweden">
-                    Sweden
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Sweden">Sweden</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         5 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Tunisia">
-                    Tunisia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Tunisia">Tunisia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Spain" 
+                 data-away="Cape Verde Islands">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
-                    Spain
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">Spain</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">
-                    Cape Verde Islands
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Belgium" 
+                 data-away="Egypt">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
-                    Belgium
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">Belgium</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">
-                    Egypt
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">Egypt</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Saudi Arabia" 
+                 data-away="Uruguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Saudi Arabia">
-                    Saudi Arabia
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uruguay">
-                    Uruguay
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uruguay">Uruguay</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Iran" 
+                 data-away="New Zealand">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iran">
-                    Iran
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iran">Iran</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 2
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="New Zealand">
-                    New Zealand
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="New Zealand">New Zealand</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="France" 
+                 data-away="Senegal">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
-                    France
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">France</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">
-                    Senegal
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">Senegal</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Iraq" 
+                 data-away="Norway">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iraq">
-                    Iraq
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iraq">Iraq</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 4
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Norway">
-                    Norway
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Norway">Norway</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Argentina" 
+                 data-away="Algeria">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
-                    Argentina
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">Argentina</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">
-                    Algeria
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">Algeria</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Austria" 
+                 data-away="Jordan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Austria">
-                    Austria
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Austria">Austria</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Jordan">
-                    Jordan
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Jordan">Jordan</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Portugal" 
+                 data-away="Congo DR">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
-                    Portugal
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">Portugal</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">
-                    Congo DR
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">Congo DR</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="England" 
+                 data-away="Croatia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
-                    England
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">England</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 2
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">
-                    Croatia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">Croatia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Ghana" 
+                 data-away="Panama">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ghana">
-                    Ghana
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ghana">Ghana</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Panama">
-                    Panama
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Panama">Panama</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Uzbekistan" 
+                 data-away="Colombia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uzbekistan">
-                    Uzbekistan
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uzbekistan">Uzbekistan</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 3
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Colombia">
-                    Colombia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Colombia">Colombia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Czechia" 
+                 data-away="South Africa">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
-                    Czechia
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">Czechia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">
-                    South Africa
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">South Africa</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Switzerland" 
+                 data-away="Bosnia-Herzegovina">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
-                    Switzerland
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">Switzerland</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">
-                    Bosnia-Herzegovina
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Canada" 
+                 data-away="Qatar">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
-                    Canada
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">Canada</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         6 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">
-                    Qatar
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">Qatar</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Mexico" 
+                 data-away="South Korea">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
-                    Mexico
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">Mexico</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">
-                    South Korea
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">South Korea</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="United States" 
+                 data-away="Australia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
-                    United States
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">United States</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">
-                    Australia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">Australia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Scotland" 
+                 data-away="Morocco">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
-                    Scotland
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">Scotland</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">
-                    Morocco
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">Morocco</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Brazil" 
+                 data-away="Haiti">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
-                    Brazil
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">Brazil</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">
-                    Haiti
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">Haiti</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Turkey" 
+                 data-away="Paraguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
-                    Turkey
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">Turkey</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">
-                    Paraguay
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">Paraguay</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Netherlands" 
+                 data-away="Sweden">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
-                    Netherlands
-                </div>
-                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">Netherlands</div>
                 <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-red-600 text-white animate-pulse">
                         2 - 0
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">
-                    Sweden
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">Sweden</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
-                    Germany
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Germany" 
+                 data-away="Ivory Coast">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">Germany</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">
-                    Ivory Coast
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">Ivory Coast</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
-                    Ecuador
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Ecuador" 
+                 data-away="Curaçao">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">Ecuador</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">
-                    Curaçao
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">Curaçao</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
-                    Tunisia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Tunisia" 
+                 data-away="Japan">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">Tunisia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">
-                    Japan
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">Japan</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
-                    Spain
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Spain" 
+                 data-away="Saudi Arabia">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">Spain</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">
-                    Saudi Arabia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
-                    Belgium
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Belgium" 
+                 data-away="Iran">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">Belgium</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">
-                    Iran
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">Iran</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
-                    Uruguay
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Uruguay" 
+                 data-away="Cape Verde Islands">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">Uruguay</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">
-                    Cape Verde Islands
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
-                    New Zealand
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="New Zealand" 
+                 data-away="Egypt">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">New Zealand</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">
-                    Egypt
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">Egypt</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
-                    Argentina
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Argentina" 
+                 data-away="Austria">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">Argentina</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">
-                    Austria
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">Austria</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
-                    France
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="France" 
+                 data-away="Iraq">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">France</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">
-                    Iraq
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">Iraq</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
-                    Norway
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Norway" 
+                 data-away="Senegal">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">Norway</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">
-                    Senegal
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">Senegal</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
-                    Jordan
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Jordan" 
+                 data-away="Algeria">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">Jordan</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">
-                    Algeria
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">Algeria</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
-                    Portugal
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Portugal" 
+                 data-away="Uzbekistan">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">Portugal</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">
-                    Uzbekistan
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">Uzbekistan</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
-                    England
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="England" 
+                 data-away="Ghana">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">England</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">
-                    Ghana
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">Ghana</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
-                    Panama
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Panama" 
+                 data-away="Croatia">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">Panama</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">
-                    Croatia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">Croatia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
-                    Colombia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Colombia" 
+                 data-away="Congo DR">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">Colombia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">
-                    Congo DR
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">Congo DR</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
-                    Switzerland
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Switzerland" 
+                 data-away="Canada">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">Switzerland</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Canada">
-                    Canada
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Canada">Canada</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Bosnia-Herzegovina">
-                    Bosnia-Herzegovina
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Bosnia-Herzegovina" 
+                 data-away="Qatar">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">
-                    Qatar
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">Qatar</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Morocco">
-                    Morocco
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Morocco" 
+                 data-away="Haiti">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Morocco">Morocco</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">
-                    Haiti
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">Haiti</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
-                    Scotland
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Scotland" 
+                 data-away="Brazil">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">Scotland</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Brazil">
-                    Brazil
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Brazil">Brazil</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
-                    Czechia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Czechia" 
+                 data-away="Mexico">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">Czechia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Mexico">
-                    Mexico
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Mexico">Mexico</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Africa">
-                    South Africa
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="South Africa" 
+                 data-away="South Korea">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Africa">South Africa</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">
-                    South Korea
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">South Korea</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
-                    Ecuador
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Ecuador" 
+                 data-away="Germany">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">Ecuador</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Germany">
-                    Germany
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Germany">Germany</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Curaçao">
-                    Curaçao
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Curaçao" 
+                 data-away="Ivory Coast">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Curaçao">Curaçao</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">
-                    Ivory Coast
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">Ivory Coast</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
-                    Tunisia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Tunisia" 
+                 data-away="Netherlands">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">Tunisia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Netherlands">
-                    Netherlands
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Netherlands">Netherlands</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Japan">
-                    Japan
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Japan" 
+                 data-away="Sweden">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Japan">Japan</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">
-                    Sweden
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">Sweden</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
-                    Turkey
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Turkey" 
+                 data-away="United States">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">Turkey</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="United States">
-                    United States
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="United States">United States</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Paraguay">
-                    Paraguay
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Paraguay" 
+                 data-away="Australia">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Paraguay">Paraguay</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">
-                    Australia
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">Australia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
-                    Norway
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Norway" 
+                 data-away="France">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">Norway</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="France">
-                    France
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="France">France</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Senegal">
-                    Senegal
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Senegal" 
+                 data-away="Iraq">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Senegal">Senegal</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">
-                    Iraq
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">Iraq</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
-                    Uruguay
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Uruguay" 
+                 data-away="Spain">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">Uruguay</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Spain">
-                    Spain
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Spain">Spain</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Cape Verde Islands">
-                    Cape Verde Islands
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Cape Verde Islands" 
+                 data-away="Saudi Arabia">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">
-                    Saudi Arabia
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
-                    New Zealand
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="New Zealand" 
+                 data-away="Belgium">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">New Zealand</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Belgium">
-                    Belgium
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Belgium">Belgium</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Egypt">
-                    Egypt
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Egypt" 
+                 data-away="Iran">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Egypt">Egypt</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">
-                    Iran
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">Iran</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
-                    Panama
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Panama" 
+                 data-away="England">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">Panama</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="England">
-                    England
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="England">England</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Croatia">
-                    Croatia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Croatia" 
+                 data-away="Ghana">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Croatia">Croatia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">
-                    Ghana
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">Ghana</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
-                    Colombia
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Colombia" 
+                 data-away="Portugal">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">Colombia</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Portugal">
-                    Portugal
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Portugal">Portugal</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Congo DR">
-                    Congo DR
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Congo DR" 
+                 data-away="Uzbekistan">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Congo DR">Congo DR</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">
-                    Uzbekistan
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">Uzbekistan</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
-                    Jordan
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Jordan" 
+                 data-away="Argentina">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">Jordan</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Argentina">
-                    Argentina
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Argentina">Argentina</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Algeria">
-                    Algeria
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Algeria" 
+                 data-away="Austria">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Algeria">Algeria</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">
-                    Austria
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">Austria</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
                 </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
 
-            <div class="grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-09</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
             </div>
         
-        </div>
-
-        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
-            <div class="bg-blue-900/40 px-6 py-4 border-b border-gray-700">
-                <h3 class="text-xl font-bold text-blue-400 tracking-wide flex items-center gap-2">
-                    📺 PARTIDOS QUE TRANSMITIRÁ TELEFE
-                </h3>
-            </div>
-            <div class="divide-y divide-gray-700 font-mono text-sm">
-                <div class="grid grid-cols-3 px-6 py-3 bg-gray-850 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                    <div>Fecha / Hora</div>
-                    <div class="col-span-2 text-right sm:text-left sm:pl-8">Partido</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">11/06 – 16:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">México vs. Sudáfrica</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">12/06 – 22:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Estados Unidos vs. Paraguay</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">13/06 – 19:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Brasil vs. Marruecos</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">14/06 – 17:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Países Bajos vs. Japón</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">14/06 – 20:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Ecuador vs. Costa de Marfil</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">15/06 – 19:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Uruguay vs. Arabia Saudita</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 bg-sky-950/20 hover:bg-sky-950/40 border-y border-sky-900/50 transition-colors">
-                    <div class="text-amber-400 font-bold">16/06 – 22:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-bold text-amber-300">🇦🇷 Argentina vs. Argelia</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">17/06 – 17:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Inglaterra vs. Croacia</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">18/06 – 16:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Suiza vs. Bosnia</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">19/06 – 19:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Escocia vs. Marruecos</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">20/06 – 17:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Alemania vs. Costa de Marfil</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">21/06 – 13:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">España vs. Arabia Saudita</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">21/06 – 19:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Uruguay vs. Cabo Verde</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 bg-sky-950/20 hover:bg-sky-950/40 border-y border-sky-900/50 transition-colors">
-                    <div class="text-amber-400 font-bold">22/06 – 14:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-bold text-amber-300">🇦🇷 Argentina vs. Austria</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">23/06 – 14:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Portugal vs. Uzbekistán</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">23/06 – 17:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Inglaterra vs. Ghana</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">24/06 – 19:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Escocia vs. Brasil</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">25/06 – 17:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Ecuador vs. Alemania</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">25/06 – 23:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Paraguay vs. Australia</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">26/06 – 16:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Noruega vs. Francia</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 hover:bg-gray-750 transition-colors">
-                    <div class="text-blue-300">26/06 – 21:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-semibold">Uruguay vs. España</div>
-                </div>
-                <div class="grid grid-cols-3 px-6 py-3.5 bg-sky-950/20 hover:bg-sky-950/40 border-y border-sky-900/50 transition-colors">
-                    <div class="text-amber-400 font-bold">27/06 – 23:00</div><div class="col-span-2 text-right sm:text-left sm:pl-8 font-bold text-amber-300">🇦🇷 Argentina vs. Jordania</div>
-                </div>
-            </div>
-    
             </div>
             <footer class="mt-8 text-center text-xs text-gray-500">
                 Automated via GitHub Actions • Data source: Football-Data.org
@@ -2086,4 +1613,4 @@
         </div>
     </body>
     </html>
-        
+    
