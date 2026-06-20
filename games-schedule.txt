@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-20 16:37:20 ART
+⏰ Last Update: 2026-06-20 17:37:16 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -35,7 +35,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-20      | Brazil                    | Haiti                     | 3 - 0
 2026-06-20      | Turkey                    | Paraguay                  | 0 - 1
 2026-06-20      | Netherlands               | Sweden                    | 5 - 1
-2026-06-19      | Germany                   | Ivory Coast               | - - -
+2026-06-20      | Germany                   | Ivory Coast               | 0 - 1
 2026-06-19      | Ecuador                   | Curaçao                   | - - -
 2026-06-19      | Tunisia                   | Japan                     | - - -
 2026-06-19      | Spain                     | Saudi Arabia              | - - -
