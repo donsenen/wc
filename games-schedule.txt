@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-19 23:37:17 ART
+⏰ Last Update: 2026-06-20 00:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -33,77 +33,77 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-19      | United States             | Australia                 | 2 - 0
 2026-06-20      | Scotland                  | Morocco                   | 0 - 1
 2026-06-20      | Brazil                    | Haiti                     | 3 - 0
-2026-04-01      | Turkey                    | Paraguay                  | - - -
-2026-04-01      | Netherlands               | Sweden                    | - - -
-2026-05-11      | Germany                   | Ivory Coast               | - - -
-2025-12-06      | Ecuador                   | Curaçao                   | - - -
-2026-03-30      | Tunisia                   | Japan                     | - - -
-2026-05-11      | Spain                     | Saudi Arabia              | - - -
-2025-12-06      | Belgium                   | Iran                      | - - -
-2026-05-11      | Uruguay                   | Cape Verde Islands        | - - -
-2025-12-06      | New Zealand               | Egypt                     | - - -
-2026-05-11      | Argentina                 | Austria                   | - - -
-2026-05-11      | France                    | Iraq                      | - - -
-2025-12-06      | Norway                    | Senegal                   | - - -
-2026-03-30      | Jordan                    | Algeria                   | - - -
-2025-12-06      | Portugal                  | Uzbekistan                | - - -
-2026-05-11      | England                   | Ghana                     | - - -
-2025-12-06      | Panama                    | Croatia                   | - - -
-2026-04-01      | Colombia                  | Congo DR                  | - - -
-2025-12-06      | Switzerland               | Canada                    | - - -
-2026-04-01      | Bosnia-Herzegovina        | Qatar                     | - - -
-2025-12-06      | Morocco                   | Haiti                     | - - -
-2026-05-11      | Scotland                  | Brazil                    | - - -
-2026-04-01      | Czechia                   | Mexico                    | - - -
-2025-12-06      | South Africa              | South Korea               | - - -
-2026-05-11      | Ecuador                   | Germany                   | - - -
-2025-12-06      | Curaçao                   | Ivory Coast               | - - -
-2025-12-06      | Tunisia                   | Netherlands               | - - -
-2026-04-01      | Japan                     | Sweden                    | - - -
-2026-04-01      | Turkey                    | United States             | - - -
-2025-12-06      | Paraguay                  | Australia                 | - - -
-2026-05-11      | Norway                    | France                    | - - -
-2026-04-01      | Senegal                   | Iraq                      | - - -
-2026-05-11      | Uruguay                   | Spain                     | - - -
-2025-12-06      | Cape Verde Islands        | Saudi Arabia              | - - -
-2025-12-06      | New Zealand               | Belgium                   | - - -
-2025-12-06      | Egypt                     | Iran                      | - - -
-2026-05-11      | Panama                    | England                   | - - -
-2025-12-06      | Croatia                   | Ghana                     | - - -
-2025-12-06      | Colombia                  | Portugal                  | - - -
-2026-04-01      | Congo DR                  | Uzbekistan                | - - -
-2026-05-11      | Jordan                    | Argentina                 | - - -
-2025-12-06      | Algeria                   | Austria                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
-2026-05-11      | Unknown                   | Unknown                   | - - -
+2026-06-20      | Turkey                    | Paraguay                  | 0 - 1
+2026-06-09      | Netherlands               | Sweden                    | - - -
+2026-06-09      | Germany                   | Ivory Coast               | - - -
+2026-06-09      | Ecuador                   | Curaçao                   | - - -
+2026-06-09      | Tunisia                   | Japan                     | - - -
+2026-06-09      | Spain                     | Saudi Arabia              | - - -
+2026-06-09      | Belgium                   | Iran                      | - - -
+2026-06-09      | Uruguay                   | Cape Verde Islands        | - - -
+2026-06-09      | New Zealand               | Egypt                     | - - -
+2026-06-09      | Argentina                 | Austria                   | - - -
+2026-06-09      | France                    | Iraq                      | - - -
+2026-06-09      | Norway                    | Senegal                   | - - -
+2026-06-09      | Jordan                    | Algeria                   | - - -
+2026-06-09      | Portugal                  | Uzbekistan                | - - -
+2026-06-09      | England                   | Ghana                     | - - -
+2026-06-09      | Panama                    | Croatia                   | - - -
+2026-06-09      | Colombia                  | Congo DR                  | - - -
+2026-06-09      | Switzerland               | Canada                    | - - -
+2026-06-09      | Bosnia-Herzegovina        | Qatar                     | - - -
+2026-06-09      | Morocco                   | Haiti                     | - - -
+2026-06-09      | Scotland                  | Brazil                    | - - -
+2026-06-09      | Czechia                   | Mexico                    | - - -
+2026-06-09      | South Africa              | South Korea               | - - -
+2026-06-09      | Ecuador                   | Germany                   | - - -
+2026-06-09      | Curaçao                   | Ivory Coast               | - - -
+2026-06-09      | Tunisia                   | Netherlands               | - - -
+2026-06-09      | Japan                     | Sweden                    | - - -
+2026-06-09      | Turkey                    | United States             | - - -
+2026-06-09      | Paraguay                  | Australia                 | - - -
+2026-06-09      | Norway                    | France                    | - - -
+2026-06-09      | Senegal                   | Iraq                      | - - -
+2026-06-09      | Uruguay                   | Spain                     | - - -
+2026-06-09      | Cape Verde Islands        | Saudi Arabia              | - - -
+2026-06-09      | New Zealand               | Belgium                   | - - -
+2026-06-09      | Egypt                     | Iran                      | - - -
+2026-06-09      | Panama                    | England                   | - - -
+2026-06-09      | Croatia                   | Ghana                     | - - -
+2026-06-09      | Colombia                  | Portugal                  | - - -
+2026-06-09      | Congo DR                  | Uzbekistan                | - - -
+2026-06-09      | Jordan                    | Argentina                 | - - -
+2026-06-09      | Algeria                   | Austria                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
+2026-06-09      | Unknown                   | Unknown                   | - - -
 **************************************************
