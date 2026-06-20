@@ -15,6 +15,7 @@
                 var rowHome = row.getAttribute('data-home');
                 var rowAway = row.getAttribute('data-away');
 
+                // Checks if the selected team matches EITHER Home OR Away
                 if (selectedTeam === 'all' || rowHome === selectedTeam || rowAway === selectedTeam) {
                     row.classList.remove('hidden');
                 } else {
@@ -29,13 +30,15 @@
         <header class="mb-8 text-center">
             <h2 class="text-4xl sm:text-5xl font-black text-amber-400 mb-2 tracking-tight">⚽ WORLD CUP SOLO SCORES</h2>
             <p class="text-xs sm:text-sm text-gray-400 tracking-wide uppercase">
-                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-20 15:37:19 ART</span>
+                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-20 15:41:47 ART</span>
             </p>
         </header>
         
         <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
             <div class="grid grid-cols-4 bg-gray-850 px-6 py-4 font-bold border-b border-gray-700 text-amber-400 text-xs tracking-wider uppercase items-center">
+                
                 <div class="text-left text-amber-400 font-bold uppercase tracking-wider">Date</div>
+                
                 <div class="col-span-2 flex flex-col items-center gap-1 w-full max-w-[240px] mx-auto">
                     <span class="text-amber-400 font-bold uppercase tracking-wider text-[10px] mb-0.5">Filtrar por Equipo</span>
                     <select id="team-filter" onchange="filterDashboard()" class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded px-2 py-1 text-[11px] font-semibold cursor-pointer text-center focus:outline-none focus:border-amber-400 normal-case">
@@ -90,6 +93,7 @@
 <option value="Uzbekistan">Uzbekistan</option>
                     </select>
                 </div>
+                
                 <div class="text-right text-amber-400 font-bold uppercase tracking-wider">Rival</div>
             </div>
     
@@ -97,13 +101,20 @@
                  data-home="Mexico" 
                  data-away="South Africa">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">Mexico</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
+                    Mexico
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">South Africa</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">
+                    South Africa
+                </div>
             </div>
         
 
@@ -111,13 +122,20 @@
                  data-home="South Korea" 
                  data-away="Czechia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Korea">South Korea</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Korea">
+                    South Korea
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Czechia">Czechia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Czechia">
+                    Czechia
+                </div>
             </div>
         
 
@@ -125,13 +143,20 @@
                  data-home="Canada" 
                  data-away="Bosnia-Herzegovina">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">Canada</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
+                    Canada
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">
+                    Bosnia-Herzegovina
+                </div>
             </div>
         
 
@@ -139,13 +164,20 @@
                  data-home="United States" 
                  data-away="Paraguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">United States</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
+                    United States
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">Paraguay</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">
+                    Paraguay
+                </div>
             </div>
         
 
@@ -153,13 +185,20 @@
                  data-home="Qatar" 
                  data-away="Switzerland">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Qatar">Qatar</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Qatar">
+                    Qatar
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Switzerland">Switzerland</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Switzerland">
+                    Switzerland
+                </div>
             </div>
         
 
@@ -167,13 +206,20 @@
                  data-home="Brazil" 
                  data-away="Morocco">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">Brazil</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
+                    Brazil
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">Morocco</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">
+                    Morocco
+                </div>
             </div>
         
 
@@ -181,13 +227,20 @@
                  data-home="Haiti" 
                  data-away="Scotland">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Haiti">Haiti</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Haiti">
+                    Haiti
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Scotland">Scotland</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Scotland">
+                    Scotland
+                </div>
             </div>
         
 
@@ -195,13 +248,20 @@
                  data-home="Australia" 
                  data-away="Turkey">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Australia">Australia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Australia">
+                    Australia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Turkey">Turkey</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Turkey">
+                    Turkey
+                </div>
             </div>
         
 
@@ -209,13 +269,20 @@
                  data-home="Germany" 
                  data-away="Curaçao">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">Germany</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
+                    Germany
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         7 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">Curaçao</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">
+                    Curaçao
+                </div>
             </div>
         
 
@@ -223,13 +290,20 @@
                  data-home="Netherlands" 
                  data-away="Japan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">Netherlands</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
+                    Netherlands
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 2
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">Japan</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">
+                    Japan
+                </div>
             </div>
         
 
@@ -237,13 +311,20 @@
                  data-home="Ivory Coast" 
                  data-away="Ecuador">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ivory Coast">Ivory Coast</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ivory Coast">
+                    Ivory Coast
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ecuador">Ecuador</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ecuador">
+                    Ecuador
+                </div>
             </div>
         
 
@@ -251,13 +332,20 @@
                  data-home="Sweden" 
                  data-away="Tunisia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Sweden">Sweden</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Sweden">
+                    Sweden
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         5 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Tunisia">Tunisia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Tunisia">
+                    Tunisia
+                </div>
             </div>
         
 
@@ -265,13 +353,20 @@
                  data-home="Spain" 
                  data-away="Cape Verde Islands">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">Spain</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
+                    Spain
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">
+                    Cape Verde Islands
+                </div>
             </div>
         
 
@@ -279,13 +374,20 @@
                  data-home="Belgium" 
                  data-away="Egypt">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">Belgium</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
+                    Belgium
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">Egypt</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">
+                    Egypt
+                </div>
             </div>
         
 
@@ -293,13 +395,20 @@
                  data-home="Saudi Arabia" 
                  data-away="Uruguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Saudi Arabia">
+                    Saudi Arabia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uruguay">Uruguay</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uruguay">
+                    Uruguay
+                </div>
             </div>
         
 
@@ -307,13 +416,20 @@
                  data-home="Iran" 
                  data-away="New Zealand">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iran">Iran</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iran">
+                    Iran
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 2
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="New Zealand">New Zealand</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="New Zealand">
+                    New Zealand
+                </div>
             </div>
         
 
@@ -321,13 +437,20 @@
                  data-home="France" 
                  data-away="Senegal">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">France</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
+                    France
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">Senegal</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">
+                    Senegal
+                </div>
             </div>
         
 
@@ -335,13 +458,20 @@
                  data-home="Iraq" 
                  data-away="Norway">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iraq">Iraq</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iraq">
+                    Iraq
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 4
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Norway">Norway</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Norway">
+                    Norway
+                </div>
             </div>
         
 
@@ -349,13 +479,20 @@
                  data-home="Argentina" 
                  data-away="Algeria">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">Argentina</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
+                    Argentina
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">Algeria</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">
+                    Algeria
+                </div>
             </div>
         
 
@@ -363,13 +500,20 @@
                  data-home="Austria" 
                  data-away="Jordan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Austria">Austria</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Austria">
+                    Austria
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Jordan">Jordan</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Jordan">
+                    Jordan
+                </div>
             </div>
         
 
@@ -377,13 +521,20 @@
                  data-home="Portugal" 
                  data-away="Congo DR">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">Portugal</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
+                    Portugal
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">Congo DR</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">
+                    Congo DR
+                </div>
             </div>
         
 
@@ -391,13 +542,20 @@
                  data-home="England" 
                  data-away="Croatia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">England</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
+                    England
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 2
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">Croatia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">
+                    Croatia
+                </div>
             </div>
         
 
@@ -405,13 +563,20 @@
                  data-home="Ghana" 
                  data-away="Panama">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ghana">Ghana</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ghana">
+                    Ghana
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Panama">Panama</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Panama">
+                    Panama
+                </div>
             </div>
         
 
@@ -419,13 +584,20 @@
                  data-home="Uzbekistan" 
                  data-away="Colombia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uzbekistan">Uzbekistan</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uzbekistan">
+                    Uzbekistan
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 3
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Colombia">Colombia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Colombia">
+                    Colombia
+                </div>
             </div>
         
 
@@ -433,13 +605,20 @@
                  data-home="Czechia" 
                  data-away="South Africa">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">Czechia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
+                    Czechia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">South Africa</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Africa">
+                    South Africa
+                </div>
             </div>
         
 
@@ -447,13 +626,20 @@
                  data-home="Switzerland" 
                  data-away="Bosnia-Herzegovina">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">Switzerland</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
+                    Switzerland
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         4 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Bosnia-Herzegovina">
+                    Bosnia-Herzegovina
+                </div>
             </div>
         
 
@@ -461,13 +647,20 @@
                  data-home="Canada" 
                  data-away="Qatar">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">Canada</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
+                    Canada
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         6 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">Qatar</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">
+                    Qatar
+                </div>
             </div>
         
 
@@ -475,13 +668,20 @@
                  data-home="Mexico" 
                  data-away="South Korea">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">Mexico</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
+                    Mexico
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         1 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">South Korea</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">
+                    South Korea
+                </div>
             </div>
         
 
@@ -489,13 +689,20 @@
                  data-home="United States" 
                  data-away="Australia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">United States</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
+                    United States
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         2 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">Australia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">
+                    Australia
+                </div>
             </div>
         
 
@@ -503,13 +710,20 @@
                  data-home="Scotland" 
                  data-away="Morocco">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">Scotland</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
+                    Scotland
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">Morocco</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Morocco">
+                    Morocco
+                </div>
             </div>
         
 
@@ -517,13 +731,20 @@
                  data-home="Brazil" 
                  data-away="Haiti">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">Brazil</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
+                    Brazil
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         3 - 0
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">Haiti</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">
+                    Haiti
+                </div>
             </div>
         
 
@@ -531,13 +752,20 @@
                  data-home="Turkey" 
                  data-away="Paraguay">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">Turkey</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
+                    Turkey
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-amber-400">
                         0 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">Paraguay</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Paraguay">
+                    Paraguay
+                </div>
             </div>
         
 
@@ -545,13 +773,20 @@
                  data-home="Netherlands" 
                  data-away="Sweden">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">Netherlands</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
+                    Netherlands
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-red-600 text-white animate-pulse">
                         4 - 1
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">Sweden</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">
+                    Sweden
+                </div>
             </div>
         
 
@@ -559,13 +794,20 @@
                  data-home="Germany" 
                  data-away="Ivory Coast">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">Germany</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
+                    Germany
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">Ivory Coast</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">
+                    Ivory Coast
+                </div>
             </div>
         
 
@@ -573,13 +815,20 @@
                  data-home="Ecuador" 
                  data-away="Curaçao">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">Ecuador</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
+                    Ecuador
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">Curaçao</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Curaçao">
+                    Curaçao
+                </div>
             </div>
         
 
@@ -587,13 +836,20 @@
                  data-home="Tunisia" 
                  data-away="Japan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">Tunisia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
+                    Tunisia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">Japan</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Japan">
+                    Japan
+                </div>
             </div>
         
 
@@ -601,13 +857,20 @@
                  data-home="Spain" 
                  data-away="Saudi Arabia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">Spain</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
+                    Spain
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">
+                    Saudi Arabia
+                </div>
             </div>
         
 
@@ -615,13 +878,20 @@
                  data-home="Belgium" 
                  data-away="Iran">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">Belgium</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
+                    Belgium
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">Iran</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">
+                    Iran
+                </div>
             </div>
         
 
@@ -629,13 +899,20 @@
                  data-home="Uruguay" 
                  data-away="Cape Verde Islands">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">Uruguay</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
+                    Uruguay
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Cape Verde Islands">
+                    Cape Verde Islands
+                </div>
             </div>
         
 
@@ -643,13 +920,20 @@
                  data-home="New Zealand" 
                  data-away="Egypt">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">New Zealand</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
+                    New Zealand
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">Egypt</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Egypt">
+                    Egypt
+                </div>
             </div>
         
 
@@ -657,13 +941,20 @@
                  data-home="Argentina" 
                  data-away="Austria">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">Argentina</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
+                    Argentina
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">Austria</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">
+                    Austria
+                </div>
             </div>
         
 
@@ -671,13 +962,20 @@
                  data-home="France" 
                  data-away="Iraq">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">France</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
+                    France
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">Iraq</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">
+                    Iraq
+                </div>
             </div>
         
 
@@ -685,13 +983,20 @@
                  data-home="Norway" 
                  data-away="Senegal">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">Norway</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
+                    Norway
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">Senegal</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Senegal">
+                    Senegal
+                </div>
             </div>
         
 
@@ -699,13 +1004,20 @@
                  data-home="Jordan" 
                  data-away="Algeria">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">Jordan</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
+                    Jordan
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">Algeria</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Algeria">
+                    Algeria
+                </div>
             </div>
         
 
@@ -713,13 +1025,20 @@
                  data-home="Portugal" 
                  data-away="Uzbekistan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">Portugal</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
+                    Portugal
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">Uzbekistan</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">
+                    Uzbekistan
+                </div>
             </div>
         
 
@@ -727,13 +1046,20 @@
                  data-home="England" 
                  data-away="Ghana">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">England</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
+                    England
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">Ghana</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">
+                    Ghana
+                </div>
             </div>
         
 
@@ -741,13 +1067,20 @@
                  data-home="Panama" 
                  data-away="Croatia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">Panama</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
+                    Panama
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">Croatia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Croatia">
+                    Croatia
+                </div>
             </div>
         
 
@@ -755,13 +1088,20 @@
                  data-home="Colombia" 
                  data-away="Congo DR">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">Colombia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
+                    Colombia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">Congo DR</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Congo DR">
+                    Congo DR
+                </div>
             </div>
         
 
@@ -769,13 +1109,20 @@
                  data-home="Switzerland" 
                  data-away="Canada">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">Switzerland</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
+                    Switzerland
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Canada">Canada</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Canada">
+                    Canada
+                </div>
             </div>
         
 
@@ -783,13 +1130,20 @@
                  data-home="Bosnia-Herzegovina" 
                  data-away="Qatar">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Bosnia-Herzegovina">Bosnia-Herzegovina</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Bosnia-Herzegovina">
+                    Bosnia-Herzegovina
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">Qatar</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Qatar">
+                    Qatar
+                </div>
             </div>
         
 
@@ -797,13 +1151,20 @@
                  data-home="Morocco" 
                  data-away="Haiti">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Morocco">Morocco</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Morocco">
+                    Morocco
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">Haiti</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Haiti">
+                    Haiti
+                </div>
             </div>
         
 
@@ -811,13 +1172,20 @@
                  data-home="Scotland" 
                  data-away="Brazil">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">Scotland</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
+                    Scotland
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Brazil">Brazil</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Brazil">
+                    Brazil
+                </div>
             </div>
         
 
@@ -825,13 +1193,20 @@
                  data-home="Czechia" 
                  data-away="Mexico">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">Czechia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
+                    Czechia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Mexico">Mexico</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Mexico">
+                    Mexico
+                </div>
             </div>
         
 
@@ -839,13 +1214,20 @@
                  data-home="South Africa" 
                  data-away="South Korea">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Africa">South Africa</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Africa">
+                    South Africa
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">South Korea</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="South Korea">
+                    South Korea
+                </div>
             </div>
         
 
@@ -853,13 +1235,20 @@
                  data-home="Ecuador" 
                  data-away="Germany">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">Ecuador</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
+                    Ecuador
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Germany">Germany</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Germany">
+                    Germany
+                </div>
             </div>
         
 
@@ -867,13 +1256,20 @@
                  data-home="Curaçao" 
                  data-away="Ivory Coast">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Curaçao">Curaçao</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Curaçao">
+                    Curaçao
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">Ivory Coast</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ivory Coast">
+                    Ivory Coast
+                </div>
             </div>
         
 
@@ -881,13 +1277,20 @@
                  data-home="Tunisia" 
                  data-away="Netherlands">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">Tunisia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
+                    Tunisia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Netherlands">Netherlands</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Netherlands">
+                    Netherlands
+                </div>
             </div>
         
 
@@ -895,13 +1298,20 @@
                  data-home="Japan" 
                  data-away="Sweden">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Japan">Japan</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Japan">
+                    Japan
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">Sweden</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Sweden">
+                    Sweden
+                </div>
             </div>
         
 
@@ -909,13 +1319,20 @@
                  data-home="Turkey" 
                  data-away="United States">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">Turkey</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
+                    Turkey
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="United States">United States</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="United States">
+                    United States
+                </div>
             </div>
         
 
@@ -923,13 +1340,20 @@
                  data-home="Paraguay" 
                  data-away="Australia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Paraguay">Paraguay</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Paraguay">
+                    Paraguay
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">Australia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Australia">
+                    Australia
+                </div>
             </div>
         
 
@@ -937,13 +1361,20 @@
                  data-home="Norway" 
                  data-away="France">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">Norway</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
+                    Norway
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="France">France</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="France">
+                    France
+                </div>
             </div>
         
 
@@ -951,13 +1382,20 @@
                  data-home="Senegal" 
                  data-away="Iraq">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Senegal">Senegal</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Senegal">
+                    Senegal
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">Iraq</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iraq">
+                    Iraq
+                </div>
             </div>
         
 
@@ -965,13 +1403,20 @@
                  data-home="Uruguay" 
                  data-away="Spain">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">Uruguay</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
+                    Uruguay
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Spain">Spain</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Spain">
+                    Spain
+                </div>
             </div>
         
 
@@ -979,13 +1424,20 @@
                  data-home="Cape Verde Islands" 
                  data-away="Saudi Arabia">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Cape Verde Islands">Cape Verde Islands</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Cape Verde Islands">
+                    Cape Verde Islands
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">Saudi Arabia</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Saudi Arabia">
+                    Saudi Arabia
+                </div>
             </div>
         
 
@@ -993,13 +1445,20 @@
                  data-home="New Zealand" 
                  data-away="Belgium">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">New Zealand</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
+                    New Zealand
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Belgium">Belgium</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Belgium">
+                    Belgium
+                </div>
             </div>
         
 
@@ -1007,13 +1466,20 @@
                  data-home="Egypt" 
                  data-away="Iran">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Egypt">Egypt</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Egypt">
+                    Egypt
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">Iran</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Iran">
+                    Iran
+                </div>
             </div>
         
 
@@ -1021,13 +1487,20 @@
                  data-home="Panama" 
                  data-away="England">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">Panama</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
+                    Panama
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="England">England</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="England">
+                    England
+                </div>
             </div>
         
 
@@ -1035,13 +1508,20 @@
                  data-home="Croatia" 
                  data-away="Ghana">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Croatia">Croatia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Croatia">
+                    Croatia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">Ghana</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Ghana">
+                    Ghana
+                </div>
             </div>
         
 
@@ -1049,13 +1529,20 @@
                  data-home="Colombia" 
                  data-away="Portugal">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">Colombia</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
+                    Colombia
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Portugal">Portugal</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Portugal">
+                    Portugal
+                </div>
             </div>
         
 
@@ -1063,13 +1550,20 @@
                  data-home="Congo DR" 
                  data-away="Uzbekistan">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Congo DR">Congo DR</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Congo DR">
+                    Congo DR
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">Uzbekistan</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Uzbekistan">
+                    Uzbekistan
+                </div>
             </div>
         
 
@@ -1077,13 +1571,20 @@
                  data-home="Jordan" 
                  data-away="Argentina">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">Jordan</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
+                    Jordan
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Argentina">Argentina</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Argentina">
+                    Argentina
+                </div>
             </div>
         
 
@@ -1091,13 +1592,20 @@
                  data-home="Algeria" 
                  data-away="Austria">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Algeria">Algeria</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Algeria">
+                    Algeria
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">Austria</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Austria">
+                    Austria
+                </div>
             </div>
         
 
@@ -1105,13 +1613,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1119,13 +1634,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1133,13 +1655,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1147,13 +1676,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1161,13 +1697,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1175,13 +1718,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1189,13 +1739,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1203,13 +1760,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1217,13 +1781,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1231,13 +1802,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1245,13 +1823,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1259,13 +1844,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1273,13 +1865,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1287,13 +1886,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1301,13 +1907,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1315,13 +1928,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1329,13 +1949,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1343,13 +1970,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1357,13 +1991,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1371,13 +2012,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1385,13 +2033,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1399,13 +2054,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1413,13 +2075,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1427,13 +2096,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1441,13 +2117,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1455,13 +2138,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1469,13 +2159,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1483,13 +2180,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1497,13 +2201,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1511,13 +2222,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1525,13 +2243,20 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
 
@@ -1539,17 +2264,22 @@
                  data-home="Unknown" 
                  data-away="Unknown">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
                 <div class="text-center flex justify-center">
                     <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
                         vs
                     </span>
                 </div>
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">Unknown</div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
             </div>
         
-</div>
-
         </div>
 
         <div class=""mt-16 bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
@@ -1631,12 +2361,11 @@
                 </div>
             </div>
     
-        </div> 
+            </div>
+            <footer class="mt-8 text-center text-xs text-gray-500">
+                Automated via GitHub Actions • Data source: Football-Data.org
+            </footer>
+        </div>
+    </body>
+    </html>
         
-        <footer class="mt-8 text-center text-xs text-gray-500">
-            Automated via GitHub Actions • Data source: Football-Data.org
-        </footer>
-    </div>
-</body>
-</html>
-    
