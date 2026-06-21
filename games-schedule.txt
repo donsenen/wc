@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-21 02:37:15 ART
+⏰ Last Update: 2026-06-21 05:37:18 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -34,10 +34,10 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-20      | Scotland                  | Morocco                   | 0 - 1
 2026-06-20      | Brazil                    | Haiti                     | 3 - 0
 2026-06-20      | Turkey                    | Paraguay                  | 0 - 1
-2026-06-20      | Netherlands               | Sweden                    | 5 - 1
-2026-06-20      | Germany                   | Ivory Coast               | 2 - 1
+2026-06-21      | Netherlands               | Sweden                    | 5 - 1
+2026-06-21      | Germany                   | Ivory Coast               | 2 - 1
 2026-06-21      | Ecuador                   | Curaçao                   | 0 - 0
-2026-06-21      | Tunisia                   | Japan                     | 0 - 3
+2026-06-21      | Tunisia                   | Japan                     | 0 - 4
 2026-06-20      | Spain                     | Saudi Arabia              | - - -
 2026-06-20      | Belgium                   | Iran                      | - - -
 2026-06-20      | Uruguay                   | Cape Verde Islands        | - - -
