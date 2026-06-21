@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-21 12:37:18 ART
+⏰ Last Update: 2026-06-21 13:37:19 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -38,7 +38,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-21      | Germany                   | Ivory Coast               | 2 - 1
 2026-06-21      | Ecuador                   | Curaçao                   | 0 - 0
 2026-06-21      | Tunisia                   | Japan                     | 0 - 4
-2026-06-20      | Spain                     | Saudi Arabia              | - - -
+2026-06-21      | Spain                     | Saudi Arabia              | 3 - 0
 2026-06-20      | Belgium                   | Iran                      | - - -
 2026-06-20      | Uruguay                   | Cape Verde Islands        | - - -
 2026-06-20      | New Zealand               | Egypt                     | - - -
