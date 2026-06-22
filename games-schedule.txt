@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-22 17:37:15 ART
+⏰ Last Update: 2026-06-22 18:37:17 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -43,7 +43,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-22      | Uruguay                   | Cape Verde Islands        | 2 - 2
 2026-06-22      | New Zealand               | Egypt                     | 1 - 3
 2026-06-22      | Argentina                 | Austria                   | 2 - 0
-2026-06-21      | France                    | Iraq                      | - - -
+2026-06-22      | France                    | Iraq                      | 1 - 0
 2026-06-21      | Norway                    | Senegal                   | - - -
 2026-06-21      | Jordan                    | Algeria                   | - - -
 2026-06-21      | Portugal                  | Uzbekistan                | - - -
