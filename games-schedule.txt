@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-23 19:37:17 ART
+⏰ Last Update: 2026-06-23 20:37:16 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -48,7 +48,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-23      | Jordan                    | Algeria                   | 1 - 2
 2026-06-23      | Portugal                  | Uzbekistan                | 5 - 0
 2026-06-23      | England                   | Ghana                     | 0 - 0
-2026-06-22      | Panama                    | Croatia                   | - - -
+2026-06-23      | Panama                    | Croatia                   | 0 - 0
 2026-06-22      | Colombia                  | Congo DR                  | - - -
 2026-06-22      | Switzerland               | Canada                    | - - -
 2026-06-22      | Bosnia-Herzegovina        | Qatar                     | - - -
