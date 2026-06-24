@@ -1,1 +1,1 @@
-Plain and simple Worldcup 2026 scores 
+Plain and simple FIFA Worldcup 2026 scores 
