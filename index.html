@@ -8,15 +8,24 @@
     <script>
         function filterDashboard() {
             var selectedTeam = document.getElementById('team-filter').value;
+            var selectedStage = document.getElementById('stage-filter').value;
+            var selectedGroup = document.getElementById('group-filter').value;
+            
             var rows = document.getElementsByClassName('match-row');
 
             for (var i = 0; i < rows.length; i++) {
                 var row = rows[i];
                 var rowHome = row.getAttribute('data-home');
                 var rowAway = row.getAttribute('data-away');
+                var rowStage = row.getAttribute('data-stage');
+                var rowGroup = row.getAttribute('data-group');
 
-                // Checks if the selected team matches EITHER Home OR Away
-                if (selectedTeam === 'all' || rowHome === selectedTeam || rowAway === selectedTeam) {
+                // Check all conditions simultaneously
+                var matchesTeam = (selectedTeam === 'all' || rowHome === selectedTeam || rowAway === selectedTeam);
+                var matchesStage = (selectedStage === 'all' || rowStage === selectedStage);
+                var matchesGroup = (selectedGroup === 'all' || rowGroup === selectedGroup);
+
+                if (matchesTeam && matchesStage && matchesGroup) {
                     row.classList.remove('hidden');
                 } else {
                     row.classList.add('hidden');
@@ -27,23 +36,53 @@
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen p-4 sm:p-6 font-sans">
     <div class="max-w-4xl mx-auto">
-        <header class="mb-8 text-center">
+
+        <header class="mb-6 text-center">
             <h2 class="text-4xl sm:text-5xl font-black text-amber-400 mb-2 tracking-tight">⚽ WORLD CUP SOLO SCORES</h2>
             <p class="text-xs sm:text-sm text-gray-400 tracking-wide uppercase">
-                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-24 15:37:18 ART</span>
+                Last Update: <span class="text-emerald-400 font-mono font-bold">2026-06-24 16:10:34 ART</span>
             </p>
         </header>
         
-        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
-            <div class="grid grid-cols-4 bg-gray-850 px-6 py-4 font-bold border-b border-gray-700 text-amber-400 text-xs tracking-wider uppercase items-center">
-                
-                <div class="text-left text-amber-400 font-bold uppercase tracking-wider">Date</div>
-                
-                <div class="col-span-2 flex flex-col items-center gap-1 w-full max-w-[240px] mx-auto">
-                    <span class="text-amber-400 font-bold uppercase tracking-wider text-[10px] mb-0.5">Filtrar por Equipo</span>
-                    <select id="team-filter" onchange="filterDashboard()" class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded px-2 py-1 text-[11px] font-semibold cursor-pointer text-center focus:outline-none focus:border-amber-400 normal-case">
-                        <option value="all">🔍 Todos los Equipos</option>
-                        <option value="Algeria">Algeria</option>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl p-4 mb-6 shadow-xl grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex flex-col gap-1">
+                <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Filtrar por Fase</span>
+                <select id="stage-filter" onchange="filterDashboard()" class="w-full bg-gray-900 text-gray-300 border border-gray-700 rounded px-2 py-1.5 text-xs font-semibold cursor-pointer focus:outline-none focus:border-amber-400">
+                    <option value="all">🔍 Todas las Fases</option>
+                    <option value="FINAL">FINAL</option>
+<option value="GROUP_STAGE">GROUP STAGE</option>
+<option value="LAST_16">LAST 16</option>
+<option value="LAST_32">LAST 32</option>
+<option value="QUARTER_FINALS">QUARTER FINALS</option>
+<option value="SEMI_FINALS">SEMI FINALS</option>
+<option value="THIRD_PLACE">THIRD PLACE</option>
+                </select>
+            </div>
+            
+            <div class="flex flex-col gap-1">
+                <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Filtrar por Grupo</span>
+                <select id="group-filter" onchange="filterDashboard()" class="w-full bg-gray-900 text-gray-300 border border-gray-700 rounded px-2 py-1.5 text-xs font-semibold cursor-pointer focus:outline-none focus:border-amber-400">
+                    <option value="all">🔍 Todos los Grupos</option>
+                    <option value="GROUP_A">GROUP A</option>
+<option value="GROUP_B">GROUP B</option>
+<option value="GROUP_C">GROUP C</option>
+<option value="GROUP_D">GROUP D</option>
+<option value="GROUP_E">GROUP E</option>
+<option value="GROUP_F">GROUP F</option>
+<option value="GROUP_G">GROUP G</option>
+<option value="GROUP_H">GROUP H</option>
+<option value="GROUP_I">GROUP I</option>
+<option value="GROUP_J">GROUP J</option>
+<option value="GROUP_K">GROUP K</option>
+<option value="GROUP_L">GROUP L</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Filtrar por Equipo</span>
+                <select id="team-filter" onchange="filterDashboard()" class="w-full bg-gray-900 text-gray-300 border border-gray-700 rounded px-2 py-1.5 text-xs font-semibold cursor-pointer focus:outline-none focus:border-amber-400">
+                    <option value="all">🔍 Todos los Equipos</option>
+                    <option value="Algeria">Algeria</option>
 <option value="Argentina">Argentina</option>
 <option value="Australia">Australia</option>
 <option value="Austria">Austria</option>
@@ -91,16 +130,24 @@
 <option value="United States">United States</option>
 <option value="Uruguay">Uruguay</option>
 <option value="Uzbekistan">Uzbekistan</option>
-                    </select>
-                </div>
-                
-                <div class="text-right text-amber-400 font-bold uppercase tracking-wider">Rival</div>
+                </select>
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
+            <div class="grid grid-cols-4 bg-gray-850 px-6 py-4 font-bold border-b border-gray-700 text-amber-400 text-xs tracking-wider uppercase items-center">
+                <div class="text-left">Date</div>
+                <div class="text-right pr-2 sm:pr-4">Home</div>
+                <div class="text-center">Score</div>
+                <div class="text-left pl-2 sm:pl-4">Rival</div>
             </div>
     
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Mexico" 
-                 data-away="South Africa">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="South Africa"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
                     Mexico
@@ -120,8 +167,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="South Korea" 
-                 data-away="Czechia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Czechia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Korea">
                     South Korea
@@ -141,8 +190,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Canada" 
-                 data-away="Bosnia-Herzegovina">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Bosnia-Herzegovina"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-12</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
                     Canada
@@ -162,8 +213,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="United States" 
-                 data-away="Paraguay">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Paraguay"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
                     United States
@@ -183,8 +236,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Qatar" 
-                 data-away="Switzerland">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Switzerland"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-13</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Qatar">
                     Qatar
@@ -204,8 +259,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Brazil" 
-                 data-away="Morocco">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Morocco"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
                     Brazil
@@ -225,8 +282,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Haiti" 
-                 data-away="Scotland">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Scotland"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Haiti">
                     Haiti
@@ -246,8 +305,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Australia" 
-                 data-away="Turkey">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Turkey"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-14</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Australia">
                     Australia
@@ -267,8 +328,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Germany" 
-                 data-away="Curaçao">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Curaçao"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
                     Germany
@@ -288,8 +351,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Netherlands" 
-                 data-away="Japan">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Japan"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
                     Netherlands
@@ -309,8 +374,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Ivory Coast" 
-                 data-away="Ecuador">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Ecuador"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ivory Coast">
                     Ivory Coast
@@ -330,8 +397,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Sweden" 
-                 data-away="Tunisia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Tunisia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-15</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Sweden">
                     Sweden
@@ -351,8 +420,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Spain" 
-                 data-away="Cape Verde Islands">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Cape Verde Islands"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
                     Spain
@@ -372,8 +443,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Belgium" 
-                 data-away="Egypt">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Egypt"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
                     Belgium
@@ -393,8 +466,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Saudi Arabia" 
-                 data-away="Uruguay">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Uruguay"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Saudi Arabia">
                     Saudi Arabia
@@ -414,8 +489,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Iran" 
-                 data-away="New Zealand">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="New Zealand"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-16</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iran">
                     Iran
@@ -435,8 +512,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="France" 
-                 data-away="Senegal">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Senegal"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
                     France
@@ -456,8 +535,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Iraq" 
-                 data-away="Norway">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Norway"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Iraq">
                     Iraq
@@ -477,8 +558,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Argentina" 
-                 data-away="Algeria">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Algeria"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
                     Argentina
@@ -498,8 +581,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Austria" 
-                 data-away="Jordan">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Jordan"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-17</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Austria">
                     Austria
@@ -519,8 +604,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Portugal" 
-                 data-away="Congo DR">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Congo DR"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
                     Portugal
@@ -540,8 +627,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="England" 
-                 data-away="Croatia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Croatia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
                     England
@@ -561,8 +650,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Ghana" 
-                 data-away="Panama">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Panama"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ghana">
                     Ghana
@@ -582,8 +673,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Uzbekistan" 
-                 data-away="Colombia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Colombia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-18</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uzbekistan">
                     Uzbekistan
@@ -603,8 +696,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Czechia" 
-                 data-away="South Africa">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="South Africa"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
                     Czechia
@@ -624,8 +719,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Switzerland" 
-                 data-away="Bosnia-Herzegovina">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Bosnia-Herzegovina"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
                     Switzerland
@@ -645,8 +742,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Canada" 
-                 data-away="Qatar">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Qatar"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Canada">
                     Canada
@@ -666,8 +765,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Mexico" 
-                 data-away="South Korea">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="South Korea"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-19</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
                     Mexico
@@ -687,8 +788,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="United States" 
-                 data-away="Australia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Australia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
                     United States
@@ -708,8 +811,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Scotland" 
-                 data-away="Morocco">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Morocco"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
                     Scotland
@@ -729,7 +834,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Brazil" 
-                 data-away="Haiti">
+                 data-away="Haiti"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Brazil">
@@ -750,8 +857,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Turkey" 
-                 data-away="Paraguay">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Paraguay"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-20</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
                     Turkey
@@ -771,7 +880,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Netherlands" 
-                 data-away="Sweden">
+                 data-away="Sweden"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Netherlands">
@@ -792,8 +903,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Germany" 
-                 data-away="Ivory Coast">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Ivory Coast"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-21</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
                     Germany
@@ -813,8 +926,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Ecuador" 
-                 data-away="Curaçao">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Curaçao"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-21</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
                     Ecuador
@@ -834,8 +949,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Tunisia" 
-                 data-away="Japan">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Japan"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-21</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
                     Tunisia
@@ -855,8 +972,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Spain" 
-                 data-away="Saudi Arabia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Saudi Arabia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-22</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Spain">
                     Spain
@@ -876,8 +995,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Belgium" 
-                 data-away="Iran">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Iran"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-22</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Belgium">
                     Belgium
@@ -897,8 +1018,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Uruguay" 
-                 data-away="Cape Verde Islands">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Cape Verde Islands"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-22</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
                     Uruguay
@@ -918,8 +1041,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="New Zealand" 
-                 data-away="Egypt">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Egypt"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-22</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
                     New Zealand
@@ -939,7 +1064,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Argentina" 
-                 data-away="Austria">
+                 data-away="Austria"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
@@ -960,7 +1087,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="France" 
-                 data-away="Iraq">
+                 data-away="Iraq"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="France">
@@ -981,7 +1110,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Norway" 
-                 data-away="Senegal">
+                 data-away="Senegal"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
@@ -1002,7 +1133,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Jordan" 
-                 data-away="Algeria">
+                 data-away="Algeria"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
@@ -1023,7 +1156,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Portugal" 
-                 data-away="Uzbekistan">
+                 data-away="Uzbekistan"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Portugal">
@@ -1044,8 +1179,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="England" 
-                 data-away="Ghana">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
+                 data-away="Ghana"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="England">
                     England
@@ -1065,7 +1202,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Panama" 
-                 data-away="Croatia">
+                 data-away="Croatia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
@@ -1086,7 +1225,9 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Colombia" 
-                 data-away="Congo DR">
+                 data-away="Congo DR"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
                 <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
@@ -1107,16 +1248,18 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Switzerland" 
-                 data-away="Canada">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Canada"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Switzerland">
                     Switzerland
                 </div>
                 
                 <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-red-600 text-white animate-pulse">
+                        0 - 0
                     </span>
                 </div>
                 
@@ -1128,16 +1271,18 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Bosnia-Herzegovina" 
-                 data-away="Qatar">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Qatar"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_B">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Bosnia-Herzegovina">
                     Bosnia-Herzegovina
                 </div>
                 
                 <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-red-600 text-white animate-pulse">
+                        0 - 0
                     </span>
                 </div>
                 
@@ -1149,8 +1294,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Morocco" 
-                 data-away="Haiti">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Haiti"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Morocco">
                     Morocco
@@ -1170,8 +1317,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Scotland" 
-                 data-away="Brazil">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Brazil"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_C">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Scotland">
                     Scotland
@@ -1191,8 +1340,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Czechia" 
-                 data-away="Mexico">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Mexico"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Czechia">
                     Czechia
@@ -1212,8 +1363,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="South Africa" 
-                 data-away="South Korea">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="South Korea"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_A">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="South Africa">
                     South Africa
@@ -1233,8 +1386,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Ecuador" 
-                 data-away="Germany">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Germany"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Ecuador">
                     Ecuador
@@ -1254,8 +1409,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Curaçao" 
-                 data-away="Ivory Coast">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Ivory Coast"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_E">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Curaçao">
                     Curaçao
@@ -1275,8 +1432,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Tunisia" 
-                 data-away="Netherlands">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Netherlands"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Tunisia">
                     Tunisia
@@ -1296,8 +1455,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Japan" 
-                 data-away="Sweden">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Sweden"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_F">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Japan">
                     Japan
@@ -1317,8 +1478,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Turkey" 
-                 data-away="United States">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="United States"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Turkey">
                     Turkey
@@ -1338,8 +1501,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Paraguay" 
-                 data-away="Australia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Australia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_D">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Paraguay">
                     Paraguay
@@ -1359,8 +1524,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Norway" 
-                 data-away="France">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="France"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Norway">
                     Norway
@@ -1380,8 +1547,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Senegal" 
-                 data-away="Iraq">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Iraq"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_I">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Senegal">
                     Senegal
@@ -1401,8 +1570,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Uruguay" 
-                 data-away="Spain">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Spain"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Uruguay">
                     Uruguay
@@ -1422,8 +1593,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Cape Verde Islands" 
-                 data-away="Saudi Arabia">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Saudi Arabia"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_H">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Cape Verde Islands">
                     Cape Verde Islands
@@ -1443,8 +1616,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="New Zealand" 
-                 data-away="Belgium">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Belgium"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="New Zealand">
                     New Zealand
@@ -1464,8 +1639,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Egypt" 
-                 data-away="Iran">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Iran"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_G">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Egypt">
                     Egypt
@@ -1485,8 +1662,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Panama" 
-                 data-away="England">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="England"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Panama">
                     Panama
@@ -1506,8 +1685,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Croatia" 
-                 data-away="Ghana">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Ghana"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_L">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Croatia">
                     Croatia
@@ -1527,8 +1708,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Colombia" 
-                 data-away="Portugal">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Portugal"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Colombia">
                     Colombia
@@ -1548,8 +1731,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Congo DR" 
-                 data-away="Uzbekistan">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Uzbekistan"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_K">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Congo DR">
                     Congo DR
@@ -1569,8 +1754,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Jordan" 
-                 data-away="Argentina">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Argentina"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Jordan">
                     Jordan
@@ -1590,8 +1777,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Algeria" 
-                 data-away="Austria">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Austria"
+                 data-stage="GROUP_STAGE"
+                 data-group="GROUP_J">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Algeria">
                     Algeria
@@ -1611,8 +1800,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1632,50 +1823,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Germany" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Germany">
-                    Germany
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1695,8 +1846,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1716,50 +1869,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Mexico" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-24</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Mexico">
-                    Mexico
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1779,50 +1892,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="United States" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="United States">
-                    United States
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1842,8 +1915,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1863,8 +1938,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1884,50 +1961,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Argentina" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
-                
-                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Argentina">
-                    Argentina
-                </div>
-                
-                <div class="text-center flex justify-center">
-                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
-                        vs
-                    </span>
-                </div>
-                
-                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
-                    Unknown
-                </div>
-            </div>
-        
-
-            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
-                 data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1947,8 +1984,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1968,8 +2007,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -1989,8 +2030,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2010,8 +2053,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2031,8 +2076,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2052,8 +2099,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2073,8 +2122,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2094,8 +2145,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_32"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2115,8 +2168,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2136,8 +2191,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2157,8 +2214,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2178,8 +2237,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2199,8 +2260,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2220,8 +2283,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2241,8 +2306,10 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2262,8 +2329,194 @@
 
             <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
                  data-home="Unknown" 
-                 data-away="Unknown">
-                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-23</div>
+                 data-away="Unknown"
+                 data-stage="LAST_16"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="QUARTER_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="QUARTER_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="QUARTER_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="QUARTER_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="SEMI_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="SEMI_FINALS"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="THIRD_PLACE"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
+                
+                <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+                
+                <div class="text-center flex justify-center">
+                    <span class="inline-block px-2 sm:px-3 py-1 rounded-full font-mono font-black text-xs sm:text-sm min-w-[65px] sm:min-w-[75px] bg-gray-900 text-gray-500 text-xs">
+                        vs
+                    </span>
+                </div>
+                
+                <div class="text-left font-semibold text-xs sm:text-base pl-2 sm:pl-4 truncate block" title="Unknown">
+                    Unknown
+                </div>
+            </div>
+        
+
+            <div class="match-row grid grid-cols-4 items-center px-4 sm:px-6 py-4 border-b border-gray-700 hover:bg-gray-750 transition-colors" 
+                 data-home="Unknown" 
+                 data-away="Unknown"
+                 data-stage="FINAL"
+                 data-group="">
+                <div class="text-[10px] sm:text-sm text-gray-400 font-mono truncate">2026-06-11</div>
                 
                 <div class="text-right font-semibold text-xs sm:text-base pr-2 sm:pr-4 truncate block" title="Unknown">
                     Unknown
@@ -2368,4 +2621,3 @@
         </div>
     </body>
     </html>
-        
