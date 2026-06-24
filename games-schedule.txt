@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-24 19:37:16 ART
+⏰ Last Update: 2026-06-24 20:37:14 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -52,8 +52,8 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-24      | Colombia                  | Congo DR                  | 1 - 0
 2026-06-24      | Switzerland               | Canada                    | 2 - 1
 2026-06-24      | Bosnia-Herzegovina        | Qatar                     | 3 - 1
-2026-06-24      | Morocco                   | Haiti                     | 0 - 1
-2026-06-24      | Scotland                  | Brazil                    | 0 - 2
+2026-06-24      | Morocco                   | Haiti                     | 2 - 2
+2026-06-24      | Scotland                  | Brazil                    | 0 - 3
 2026-06-23      | Czechia                   | Mexico                    | - - -
 2026-06-23      | South Africa              | South Korea               | - - -
 2026-06-23      | Ecuador                   | Germany                   | - - -
