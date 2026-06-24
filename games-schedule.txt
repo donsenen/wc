@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-24 16:49:59 ART
+⏰ Last Update: 2026-06-24 17:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -50,7 +50,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-23      | England                   | Ghana                     | 0 - 0
 2026-06-24      | Panama                    | Croatia                   | 0 - 1
 2026-06-24      | Colombia                  | Congo DR                  | 1 - 0
-2026-06-24      | Switzerland               | Canada                    | 0 - 0
+2026-06-24      | Switzerland               | Canada                    | 2 - 0
 2026-06-24      | Bosnia-Herzegovina        | Qatar                     | 2 - 1
 2026-06-20      | Morocco                   | Haiti                     | - - -
 2026-06-20      | Scotland                  | Brazil                    | - - -
