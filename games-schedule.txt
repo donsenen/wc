@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-23 22:37:14 ART
+⏰ Last Update: 2026-06-23 23:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -49,7 +49,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-23      | Portugal                  | Uzbekistan                | 5 - 0
 2026-06-23      | England                   | Ghana                     | 0 - 0
 2026-06-24      | Panama                    | Croatia                   | 0 - 1
-2026-06-16      | Colombia                  | Congo DR                  | - - -
+2026-06-24      | Colombia                  | Congo DR                  | 0 - 0
 2026-06-16      | Switzerland               | Canada                    | - - -
 2026-06-16      | Bosnia-Herzegovina        | Qatar                     | - - -
 2026-06-16      | Morocco                   | Haiti                     | - - -
