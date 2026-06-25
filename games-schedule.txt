@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-25 18:37:15 ART
+⏰ Last Update: 2026-06-25 19:37:19 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -56,7 +56,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-25      | Scotland                  | Brazil                    | 0 - 3
 2026-06-25      | Czechia                   | Mexico                    | 0 - 3
 2026-06-25      | South Africa              | South Korea               | 1 - 0
-2026-06-25      | Ecuador                   | Germany                   | 1 - 1
+2026-06-25      | Ecuador                   | Germany                   | 2 - 1
 2026-06-25      | Curaçao                   | Ivory Coast               | 0 - 2
 2026-06-20      | Tunisia                   | Netherlands               | - - -
 2026-06-20      | Japan                     | Sweden                    | - - -
