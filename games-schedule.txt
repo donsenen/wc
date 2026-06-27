@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-27 19:37:15 ART
+⏰ Last Update: 2026-06-27 20:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -69,26 +69,26 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-27      | New Zealand               | Belgium                   | 1 - 5
 2026-06-27      | Egypt                     | Iran                      | 1 - 1
 2026-06-27      | Panama                    | England                   | 0 - 2
-2026-06-27      | Croatia                   | Ghana                     | 1 - 0
-2026-06-27      | Colombia                  | Portugal                  | - - -
-2026-06-27      | Congo DR                  | Uzbekistan                | - - -
+2026-06-27      | Croatia                   | Ghana                     | 2 - 1
+2026-06-27      | Colombia                  | Portugal                  | 0 - 0
+2026-06-27      | Congo DR                  | Uzbekistan                | 0 - 0
 2026-06-28      | Jordan                    | Argentina                 | - - -
 2026-06-28      | Algeria                   | Austria                   | - - -
-2026-06-28      | Unknown                   | Unknown                   | - - -
-2026-06-29      | Unknown                   | Unknown                   | - - -
-2026-06-29      | Unknown                   | Unknown                   | - - -
+2026-06-28      | South Africa              | Canada                    | - - -
+2026-06-29      | Brazil                    | Japan                     | - - -
+2026-06-29      | Germany                   | Unknown                   | - - -
+2026-06-30      | Netherlands               | Morocco                   | - - -
+2026-06-30      | Ivory Coast               | Unknown                   | - - -
 2026-06-30      | Unknown                   | Unknown                   | - - -
-2026-06-30      | Unknown                   | Unknown                   | - - -
-2026-06-30      | Unknown                   | Unknown                   | - - -
+2026-07-01      | Mexico                    | Unknown                   | - - -
 2026-07-01      | Unknown                   | Unknown                   | - - -
 2026-07-01      | Unknown                   | Unknown                   | - - -
-2026-07-01      | Unknown                   | Unknown                   | - - -
+2026-07-02      | United States             | Bosnia-Herzegovina        | - - -
 2026-07-02      | Unknown                   | Unknown                   | - - -
 2026-07-02      | Unknown                   | Unknown                   | - - -
-2026-07-02      | Unknown                   | Unknown                   | - - -
-2026-07-03      | Unknown                   | Unknown                   | - - -
-2026-07-03      | Unknown                   | Unknown                   | - - -
-2026-07-03      | Unknown                   | Unknown                   | - - -
+2026-07-03      | Switzerland               | Unknown                   | - - -
+2026-07-03      | Australia                 | Unknown                   | - - -
+2026-07-03      | Argentina                 | Unknown                   | - - -
 2026-07-04      | Unknown                   | Unknown                   | - - -
 2026-07-04      | Unknown                   | Unknown                   | - - -
 2026-07-04      | Unknown                   | Unknown                   | - - -
