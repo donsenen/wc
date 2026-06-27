@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-27 00:37:15 ART
+⏰ Last Update: 2026-06-27 01:37:11 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -66,7 +66,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-26      | Senegal                   | Iraq                      | 5 - 0
 2026-06-27      | Uruguay                   | Spain                     | 0 - 1
 2026-06-27      | Cape Verde Islands        | Saudi Arabia              | 0 - 0
-2026-06-27      | New Zealand               | Belgium                   | 0 - 1
+2026-06-27      | New Zealand               | Belgium                   | 0 - 3
 2026-06-27      | Egypt                     | Iran                      | 1 - 1
 2026-06-09      | Panama                    | England                   | - - -
 2026-06-09      | Croatia                   | Ghana                     | - - -
