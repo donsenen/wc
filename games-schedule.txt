@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-26 20:37:14 ART
+⏰ Last Update: 2026-06-26 21:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -64,8 +64,8 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-26      | Paraguay                  | Australia                 | 0 - 0
 2026-06-26      | Norway                    | France                    | 1 - 4
 2026-06-26      | Senegal                   | Iraq                      | 5 - 0
-2026-06-26      | Uruguay                   | Spain                     | - - -
-2026-06-26      | Cape Verde Islands        | Saudi Arabia              | - - -
+2026-06-27      | Uruguay                   | Spain                     | 0 - 0
+2026-06-27      | Cape Verde Islands        | Saudi Arabia              | 0 - 0
 2026-06-26      | New Zealand               | Belgium                   | - - -
 2026-06-26      | Egypt                     | Iran                      | - - -
 2026-06-26      | Panama                    | England                   | - - -
