@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-27 02:37:13 ART
+⏰ Last Update: 2026-06-27 05:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -62,8 +62,8 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-26      | Japan                     | Sweden                    | 1 - 1
 2026-06-26      | Turkey                    | United States             | 3 - 2
 2026-06-26      | Paraguay                  | Australia                 | 0 - 0
-2026-06-26      | Norway                    | France                    | 1 - 4
-2026-06-26      | Senegal                   | Iraq                      | 5 - 0
+2026-06-27      | Norway                    | France                    | 1 - 4
+2026-06-27      | Senegal                   | Iraq                      | 5 - 0
 2026-06-27      | Uruguay                   | Spain                     | 0 - 1
 2026-06-27      | Cape Verde Islands        | Saudi Arabia              | 0 - 0
 2026-06-27      | New Zealand               | Belgium                   | 1 - 5
@@ -78,7 +78,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-26      | Brazil                    | Japan                     | - - -
 2026-06-26      | Germany                   | Unknown                   | - - -
 2026-06-26      | Netherlands               | Morocco                   | - - -
-2026-06-26      | Unknown                   | Unknown                   | - - -
+2026-06-26      | Ivory Coast               | Unknown                   | - - -
 2026-06-26      | Unknown                   | Unknown                   | - - -
 2026-06-26      | Mexico                    | Unknown                   | - - -
 2026-06-26      | Unknown                   | Unknown                   | - - -
