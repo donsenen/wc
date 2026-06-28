@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-28 00:37:14 ART
+⏰ Last Update: 2026-06-28 01:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -68,12 +68,12 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-27      | Cape Verde Islands        | Saudi Arabia              | 0 - 0
 2026-06-27      | New Zealand               | Belgium                   | 1 - 5
 2026-06-27      | Egypt                     | Iran                      | 1 - 1
-2026-06-27      | Panama                    | England                   | 0 - 2
-2026-06-27      | Croatia                   | Ghana                     | 2 - 1
+2026-06-27      | Panama                    | England                   | - - -
+2026-06-27      | Croatia                   | Ghana                     | - - -
 2026-06-27      | Colombia                  | Portugal                  | 0 - 0
 2026-06-27      | Congo DR                  | Uzbekistan                | 3 - 1
-2026-06-28      | Jordan                    | Argentina                 | 1 - 2
-2026-06-28      | Algeria                   | Austria                   | 2 - 2
+2026-06-28      | Jordan                    | Argentina                 | 1 - 3
+2026-06-28      | Algeria                   | Austria                   | 3 - 3
 2026-06-28      | South Africa              | Canada                    | - - -
 2026-06-29      | Brazil                    | Japan                     | - - -
 2026-06-29      | Germany                   | Unknown                   | - - -
