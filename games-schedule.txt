@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-28 17:37:17 ART
+⏰ Last Update: 2026-06-28 18:37:16 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -74,7 +74,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-27      | Congo DR                  | Uzbekistan                | 3 - 1
 2026-06-28      | Jordan                    | Argentina                 | 1 - 3
 2026-06-28      | Algeria                   | Austria                   | 3 - 3
-2026-06-28      | South Africa              | Canada                    | 0 - 0
+2026-06-28      | South Africa              | Canada                    | 0 - 1
 2026-06-29      | Brazil                    | Japan                     | - - -
 2026-06-29      | Germany                   | Paraguay                  | - - -
 2026-06-30      | Netherlands               | Morocco                   | - - -
