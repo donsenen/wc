@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-30 14:37:14 ART
+⏰ Last Update: 2026-06-30 15:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -78,7 +78,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-29      | Brazil                    | Japan                     | 2 - 1
 2026-06-29      | Germany                   | Paraguay                  | 4 - 5
 2026-06-30      | Netherlands               | Morocco                   | 3 - 4
-2026-06-30      | Ivory Coast               | Norway                    | 0 - 0
+2026-06-30      | Ivory Coast               | Norway                    | 0 - 1
 2026-06-30      | France                    | Sweden                    | - - -
 2026-07-01      | Mexico                    | Ecuador                   | - - -
 2026-07-01      | England                   | Congo DR                  | - - -
