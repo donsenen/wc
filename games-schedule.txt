@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-06-30 02:37:15 ART
+⏰ Last Update: 2026-06-30 05:37:19 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -77,7 +77,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-28      | South Africa              | Canada                    | 0 - 1
 2026-06-29      | Brazil                    | Japan                     | 2 - 1
 2026-06-29      | Germany                   | Paraguay                  | 4 - 5
-2026-06-30      | Netherlands               | Morocco                   | 4 - 4
+2026-06-30      | Netherlands               | Morocco                   | 3 - 4
 2026-06-30      | Ivory Coast               | Norway                    | - - -
 2026-06-30      | France                    | Sweden                    | - - -
 2026-07-01      | Mexico                    | Ecuador                   | - - -
@@ -90,9 +90,9 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-03      | Australia                 | Egypt                     | - - -
 2026-07-03      | Argentina                 | Cape Verde Islands        | - - -
 2026-07-04      | Colombia                  | Ghana                     | - - -
-2026-07-04      | Canada                    | Unknown                   | - - -
-2026-07-04      | Unknown                   | Unknown                   | - - -
-2026-07-05      | Unknown                   | Unknown                   | - - -
+2026-07-04      | Canada                    | Morocco                   | - - -
+2026-07-04      | Paraguay                  | Unknown                   | - - -
+2026-07-05      | Brazil                    | Unknown                   | - - -
 2026-07-06      | Unknown                   | Unknown                   | - - -
 2026-07-06      | Unknown                   | Unknown                   | - - -
 2026-07-07      | Unknown                   | Unknown                   | - - -
