@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-01 14:37:14 ART
+⏰ Last Update: 2026-07-01 15:37:15 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -81,7 +81,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-06-30      | Ivory Coast               | Norway                    | 1 - 2
 2026-06-30      | France                    | Sweden                    | 3 - 0
 2026-07-01      | Mexico                    | Ecuador                   | 2 - 0
-2026-07-01      | England                   | Congo DR                  | 0 - 1
+2026-07-01      | England                   | Congo DR                  | 2 - 1
 2026-07-01      | Belgium                   | Senegal                   | - - -
 2026-07-02      | United States             | Bosnia-Herzegovina        | - - -
 2026-07-02      | Spain                     | Austria                   | - - -
