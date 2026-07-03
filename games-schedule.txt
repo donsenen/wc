@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-02 23:37:12 ART
+⏰ Last Update: 2026-07-03 00:37:13 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -86,7 +86,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-02      | United States             | Bosnia-Herzegovina        | 2 - 0
 2026-07-02      | Spain                     | Austria                   | 3 - 0
 2026-07-02      | Portugal                  | Croatia                   | 2 - 1
-2026-07-03      | Switzerland               | Algeria                   | - - -
+2026-07-03      | Switzerland               | Algeria                   | 1 - 0
 2026-07-03      | Australia                 | Egypt                     | - - -
 2026-07-03      | Argentina                 | Cape Verde Islands        | - - -
 2026-07-04      | Colombia                  | Ghana                     | - - -
