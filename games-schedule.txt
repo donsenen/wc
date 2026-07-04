@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-04 02:37:16 ART
+⏰ Last Update: 2026-07-04 05:37:16 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -94,10 +94,10 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-04      | Paraguay                  | France                    | - - -
 2026-07-05      | Brazil                    | Norway                    | - - -
 2026-07-06      | Mexico                    | England                   | - - -
-2026-07-06      | Unknown                   | Unknown                   | - - -
+2026-07-06      | Portugal                  | Spain                     | - - -
 2026-07-07      | United States             | Belgium                   | - - -
-2026-07-07      | Unknown                   | Unknown                   | - - -
-2026-07-07      | Unknown                   | Unknown                   | - - -
+2026-07-07      | Argentina                 | Egypt                     | - - -
+2026-07-07      | Switzerland               | Colombia                  | - - -
 2026-07-09      | Unknown                   | Unknown                   | - - -
 2026-07-10      | Unknown                   | Unknown                   | - - -
 2026-07-11      | Unknown                   | Unknown                   | - - -
