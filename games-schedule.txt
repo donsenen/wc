@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-05 16:37:19 ART
+⏰ Last Update: 2026-07-05 17:37:13 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -92,7 +92,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-04      | Colombia                  | Ghana                     | 1 - 0
 2026-07-04      | Canada                    | Morocco                   | 0 - 3
 2026-07-04      | Paraguay                  | France                    | 0 - 1
-2026-07-05      | Brazil                    | Norway                    | - - -
+2026-07-05      | Brazil                    | Norway                    | 0 - 0
 2026-07-06      | Mexico                    | England                   | - - -
 2026-07-06      | Portugal                  | Spain                     | - - -
 2026-07-07      | United States             | Belgium                   | - - -
