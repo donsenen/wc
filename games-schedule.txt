@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-07 13:37:17 ART
+⏰ Last Update: 2026-07-07 14:37:13 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -96,7 +96,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-06      | Mexico                    | England                   | 2 - 3
 2026-07-06      | Portugal                  | Spain                     | 0 - 1
 2026-07-07      | United States             | Belgium                   | 1 - 4
-2026-07-07      | Argentina                 | Egypt                     | 0 - 1
+2026-07-07      | Argentina                 | Egypt                     | 0 - 2
 2026-07-07      | Switzerland               | Colombia                  | - - -
 2026-07-09      | France                    | Morocco                   | - - -
 2026-07-10      | Spain                     | Belgium                   | - - -
