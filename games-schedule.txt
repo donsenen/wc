@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-10 02:37:14 ART
+⏰ Last Update: 2026-07-10 05:37:19 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -102,7 +102,7 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-10      | Spain                     | Belgium                   | - - -
 2026-07-11      | Norway                    | England                   | - - -
 2026-07-12      | Argentina                 | Switzerland               | - - -
-2026-07-14      | Unknown                   | Unknown                   | - - -
+2026-07-14      | France                    | Unknown                   | - - -
 2026-07-15      | Unknown                   | Unknown                   | - - -
 2026-07-18      | Unknown                   | Unknown                   | - - -
 2026-07-19      | Unknown                   | Unknown                   | - - -
