@@ -1,4 +1,4 @@
-⏰ Last Update: 2026-07-19 15:37:15 ART
+⏰ Last Update: 2026-07-19 16:37:18 ART
 
 lastUpdated     | Home Team                 | Away Team                 | Score
 -----------------------------------------------------------------
@@ -105,5 +105,5 @@ lastUpdated     | Home Team                 | Away Team                 | Score
 2026-07-14      | France                    | Spain                     | 0 - 2
 2026-07-15      | England                   | Argentina                 | 1 - 2
 2026-07-18      | France                    | England                   | 4 - 6
-2026-07-19      | Spain                     | Argentina                 | - - -
+2026-07-19      | Spain                     | Argentina                 | 0 - 0
 **************************************************
